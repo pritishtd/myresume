@@ -2,8 +2,8 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 20px;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #CADCFC;
+    color: 33c4ff;
 }
 
 header {
@@ -16,7 +16,16 @@ h1 {
 }
 
 h2 {
-    color: #2c3e50;
+	text-align: center;
+    color: 33c4ff;
+}
+
+h3 {
+    color: 33c4ff;
+}
+
+p {
+    color: 33c4ff;
 }
 
 section {
@@ -30,6 +39,20 @@ section {
 .job {
     margin-bottom: 15px;
 }
+
+.education-container {
+    display: flex; /* Align items horizontally */
+    justify-content: space-between; /* Space between items */
+    flex-wrap: wrap; /* Wrap items if the screen is narrow */
+}
+
+.education-item {
+    margin-right: 20px; /* Space between items */
+    flex: 1; /* Allows items to grow equally */
+    min-width: 150px; /* Minimum width for each item */
+	text-align: center; /* Center text within each item */
+}
+
 
 footer {
     text-align: center;
