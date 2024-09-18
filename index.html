@@ -5,7 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Resume</title>
     <link rel="stylesheet" href="styles.css">
-</head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+        window.onload = function() {
+            document.getElementById('download-btn').addEventListener('click', function() {
+                const { jsPDF } = window.jspdf;
+                const doc = new jsPDF();
+                doc.text("Pritish Thakurdesai", 10, 10);
+                doc.text("Technical support engineer", 10, 20);
+                doc.text("Email: pritish78@gmail.com | Phone: 8087122263", 10, 30);
+                doc.text("Location: Pune, Maharashtra", 10, 40);
+                doc.text("Summary", 10, 50);
+                doc.text("Having an overall experience of 8+ years in the IT industry.", 10, 60);
+                doc.text("Completed Microsoft Azure Administrator training.", 10, 70);
+                doc.text("Completed Microsoft AWS solution architect training.", 10, 80);
+                doc.text("Good knowledge of Cloud platforms like AWS and Azure.", 10, 90);
+                doc.text("Expertise in Windows Operating performance troubleshooting.", 10, 100);
+                doc.text("Basic understanding of the Linux operating system.", 10, 110);
+                doc.text("Experience", 10, 120);
+                doc.text("Engineer-On site support at Vintech Electronics Pvt Ltd (May 2019 – Present)", 10, 130);
+                doc.text("Desktop support engineer at Shro System’s Pvt Ltd (May 2016 – May 2019)", 10, 140);
+                doc.text("Computer lab coordinator at Technohard computers (March 2015 – May 2016)", 10, 150);
+                doc.text("Education", 10, 160);
+                doc.text("Bachelor of Arts, Mumbai University, Graduated: 2013", 10, 170);
+                doc.text("HSC, Kolhapur Board, Graduated: 2010", 10, 180);
+                doc.text("SSC, Kolhapur Board, Graduated: 2007", 10, 190);
+                doc.text("Technical Skills", 10, 200);
+                doc.text("Windows 10/11, Windows Server, Azure, AWS, Networking concepts, Active directory, Terraform", 10, 210);
+                doc.save('Resume.pdf');
+            });
+        };
+    </script>
+    <style>
+        /* Center the button and make it smaller */
+        #download-btn {
+            display: block;
+            margin: auto;
+            padding: 10px 15px;
+            font-size: 14px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #download-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
 <body>
     <header>
 	<section>
@@ -40,17 +88,17 @@
             <p>Vintech Electronics Pvt Ltd (May 2019 – Present)</p>
 			<p>Client: Siemens industry software development</p>
             <ul>
-                <li>Working as cloud administrator to provide support for IAAS.</li>
-                <li>Deployed virtual machines using the Azure portal and Terraform.</li>
-                <li>Resizing, removing and addition of disk in virtual machine.</li>
-		<li>Creating and managing Azure storage account</li>
-		<li>Upgrading virtual machine storage from standard to premium</li>
-		<li>Configuration of site to site VPN</li>
-		<li>USer management using Microsoft Azure AD</li>
-		<li>Creation of ARM templates </li>
-		<li>Strong client deice supprt experiance such as Laptop and Desktop </li>
-		<li>Good knowledge of Active Directory</li>
-		<li>Configuration of Azure virtual network</li>
+                <li>Handling windows server & client-related issues.</li>
+                <li>Daily work in Incident Management Process (ServiceNow)</li>
+                <li>Resolve incident in time as expected by the user and handle escalation</li>
+				<li>SCCM client-side troubleshooting</li>
+				<li>Hands-on experience on Windows upgrade, No boot, BSOD, windows performance, Windows servicing troubleshooting</li>
+				<li>Troubleshoot VPN-related issues</li>
+				<li>Office 365 client-side troubleshooting</li>
+				<li>Application deployment & troubleshooting</li>
+				<li>Handling AD user account lockout issues</li>
+				<li>Good knowledge of Active Directory</li>
+				<li>Troubleshooting laptop and desktop hardware issues</li>
             </ul>
         </div>
         
@@ -89,9 +137,7 @@
 				<li>Guide the new joiners for the daily used application</li>
             </ul>		
         </div>
-
-    </section>
-    
+    </section>  
     <section>
     <h2>Education</h2>
     <hr>
@@ -127,9 +173,9 @@
 		<li>Active directory</li>
 		<li>Terraform</li>
 	<ul>
-<section>
-        <h2>Download My Resume</h2>
-        <a href="path/to/your_resume.pdf" download="Pritish_Thakurdesai_Resume.pdf" class="download-button">Download Resume</a>
-    </section>
+
+<button id="download-btn">Download Resume as PDF</button>
+
+	
 </body>
 </html>
