@@ -5,57 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Resume</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script>
-        window.onload = function() {
-            document.getElementById('download-btn').addEventListener('click', function() {
-                const { jsPDF } = window.jspdf;
-                const doc = new jsPDF();
-                doc.text("Pritish Thakurdesai", 10, 10);
-                doc.text("Technical support engineer", 10, 20);
-                doc.text("Email: pritish78@gmail.com | Phone: 8087122263", 10, 30);
-                doc.text("Location: Pune, Maharashtra", 10, 40);
-                doc.text("Summary", 10, 50);
-                doc.text("Having an overall experience of 8+ years in the IT industry.", 10, 60);
-                doc.text("Completed Microsoft Azure Administrator training.", 10, 70);
-                doc.text("Completed Microsoft AWS solution architect training.", 10, 80);
-                doc.text("Good knowledge of Cloud platforms like AWS and Azure.", 10, 90);
-                doc.text("Expertise in Windows Operating performance troubleshooting.", 10, 100);
-                doc.text("Basic understanding of the Linux operating system.", 10, 110);
-                doc.text("Experience", 10, 120);
-                doc.text("Engineer-On site support at Vintech Electronics Pvt Ltd (May 2019 – Present)", 10, 130);
-                doc.text("Desktop support engineer at Shro System’s Pvt Ltd (May 2016 – May 2019)", 10, 140);
-                doc.text("Computer lab coordinator at Technohard computers (March 2015 – May 2016)", 10, 150);
-                doc.text("Education", 10, 160);
-                doc.text("Bachelor of Arts, Mumbai University, Graduated: 2013", 10, 170);
-                doc.text("HSC, Kolhapur Board, Graduated: 2010", 10, 180);
-                doc.text("SSC, Kolhapur Board, Graduated: 2007", 10, 190);
-                doc.text("Technical Skills", 10, 200);
-                doc.text("Windows 10/11, Windows Server, Azure, AWS, Networking concepts, Active directory, Terraform", 10, 210);
-                doc.save('Resume.pdf');
-            });
-        };
-    </script>
-    <style>
-        /* Center the button and make it smaller */
-        #download-btn {
-            display: block;
-            margin: auto;
-            padding: 10px 15px;
-            font-size: 14px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        #download-btn:hover {
-            background-color: #45a049;
-        }
-    </style>
 <body>
-    <header>
+    <header style="text-align: center; padding: 0; margin: 0;">
 	<section>
         <h1>Pritish Thakurdesai</h1>
         <p>Technical support engineer</p>
@@ -69,10 +20,11 @@
 		<hr>
 	<ul>
 		<li>Having an overall experience of 8+ years in the IT industry.</li>
-		<li>Completed Microsoft Azure Administrator training.</li>
-		<li>Completed Microsoft AWS solution architect training.</li>
-		<li>Good knowledge of Cloud platforms like AWS and Azure like Resource Groups, Virtual Machines, Virtual Networks, Availability Sets, Load balancers, Network Service Groups, etc.</li>
-		<li>Expertise in Windows Operating performance troubleshooting, BSOD, windows upgrades, and No Boot issues</li>
+		<li>Having 2 years of experience as Microsoft azure administrator.</li>
+		<li>Good knowledge of Azure virtual mcahine, Azure storage, Virtual network, Load balancer, Network security groups.</li>
+		<li>Having knowledge of AWS cloud platform.</li>
+		<li>Expertise in Windows Operating performance troubleshooting, BSOD, windows upgrades, and No Boot issues.</li>
+		<li>Good understanding of networking concepts DNS, DHCP, IP.</li>
 		<li>Basic understanding of the Linux operating system.</li>
 	<ul>
 </p>
@@ -161,7 +113,7 @@
     </div>
 </section>
 <section>
-        <h2>Technical Skills</h2>
+        <h2>Skills</h2>
 		<hr>
 		<hr>
 	<ul>
@@ -173,9 +125,6 @@
 		<li>Active directory</li>
 		<li>Terraform</li>
 	<ul>
-
-<button id="download-btn">Download Resume as PDF</button>
-
 	
 </body>
 </html>
